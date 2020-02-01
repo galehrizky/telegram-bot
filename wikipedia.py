@@ -20,7 +20,8 @@ class wikipedia():
 		text = ""
 		for x in js['query']['search']:
 			text += x['snippet']
-			cleantext = BeautifulSoup(text, "lxml").text
-			return cleantext
+
+		cleantext = BeautifulSoup(text, "lxml").text
+		return cleantext
 
 		
