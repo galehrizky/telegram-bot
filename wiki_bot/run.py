@@ -7,7 +7,7 @@ wiki = wikipedia()
 
 
 def handleCommands(text):
-	if text == str("Hello") or text == str("hello") or text == str("/hello") or text == str("/start"):
+	if text == str("Hello") or text == str("hello") or text == str("/hello") or text == str("/start") or text == str("/start@ngotak_bot"):
 		message = "Hallo Saya NgotakBot di Kembangkan oleh galeh Rizky,Tanya apa saja kalau saya tau akan saya jawab makasih ^^, Selamat mencoba"
 	else:
 		message = wiki._search_from_wiki(text)
