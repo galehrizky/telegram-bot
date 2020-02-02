@@ -26,7 +26,11 @@ def main():
 			chat_id = x["message"]["chat"]["id"]
 			reply_to = x["message"]["message_id"]
 			last_update_id = x["update_id"] +1 
-			text = x["message"]["text"]
+			
+			try:
+				text = x["message"]["text"]
+			except KeyError as e:
+				text ='Hmmm .......'
 		print(text)
 		message = handleCommands(text)
 		bot._sendMessage(message, chat_id, reply_to)
