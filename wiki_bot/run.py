@@ -32,7 +32,8 @@ def main():
 			except KeyError as e:
 				text ='Hmmm .......'
 		print(text)
-		message = handleCommands(text)
+		message = handleCommands(text).encode('utf-8')
+		print(message)
 		bot._sendMessage(message, chat_id, reply_to)
 		bot._write_last_updated("last_update_on", last_update_id)
 
